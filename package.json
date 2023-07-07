@@ -1,0 +1,26 @@
+{
+  "name": "neteaseplay.tensorflowAI.predictor",
+  "version": "1.0.0",
+  "description": "基于Tensorflow预测网易云歌单贡献播放量的模型",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "Dyrox",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^13.1.7",
+    "electron-builder": "^22.14.1"
+  },
+  "build": {
+    "appId": "neteaseplay.tensorflowAI.predictor",
+    "productName": "网易云歌单播放量预测模型",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "blueNetEase-Music-logo.icns"
+    }
+  }
+}

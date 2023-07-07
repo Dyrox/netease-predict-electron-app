@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>获取歌单信息</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="animate.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.13.0"></script>
+    <script src="script.js"></script>
+   
+</head>
+<body>
+    <div class="container">
+        <div class="input-container">
+            <img id="logo" class="animate__animated animate__slideInRight" src="https://www.logo.wine/a/logo/NetEase_Music/NetEase_Music-Logo.wine.svg" alt="NetEase Cloud Music Logo">
+            
+            <h1>获取歌单信息</h1>
+            <input type="text" id="playlistLink" class="inputBoxes animate__animated animate__flip" placeholder="输入歌单链接" oninput="getPlaylistInfo()">
+            <input type="number" id="playlistRanking" class="inputBoxes" placeholder="输入歌曲在歌单的排名" oninput="calculatePlaylistContributingFac(); predict()">
+            <!-- <button id="predictButton" onclick="predict()">预测！</button> -->
+            <button id="viewPlaylistButton" onclick="openPlaylistLink()" class="animate__animated animate__bounce">查看原始歌单</button>
+        </div>
+
+        <div class="info-container animate__animated animate__slideInLeft">
+
+
+            <div id="loadingIndicator">
+                <div class="loader"></div>
+            </div>
+            <img id="playlistCover" src="">
+            <h2>歌单标题</h2>
+            <p id="playlistTitle"></p>
+            <h2>歌单播放数</h2>
+            <p id="playlistPlayCount"></p>
+            <h2>歌单歌曲数量</h2>
+            <p id="playlistTrackCount"></p>
+            <h2>歌单热度</h2>
+            <p id="playlistHeat"></p>
+            <h2>预测每日贡献播放量</h2>
+            <p id="predictionField"></p>
+            
+        
+        
+        
+        </div>
+        
+    </div>
+    <div id="github-info" class="animate__animated animate__flip">
+                <a id="github-link" href="https://github.com/Dyrox" target="_blank">
+                    <img id="github-logo" src="https://www.logo.wine/a/logo/GitHub/GitHub-Logo.wine.svg" alt="GitHub Logo">
+                </a>
+                <p>Made by Dyrox</p>
+            </div>
+</body>
+</html>
+
+<!-- Animate.css - CSS Animation Library -->
+<!--
+Library: Animate.css
+License: [link to the license page]
+-->
