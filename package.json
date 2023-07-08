@@ -1,26 +1,20 @@
 {
-  "name": "neteaseplay.tensorflowAI.predictor",
+  "name": "网易预测播放量软件",
+  "productName": "网易预测electron-app",
+  "description": "基于Tensorflow.js的预测模型",
+  "keywords": [],
+  "main": "./main.js",
   "version": "1.0.0",
-  "description": "基于Tensorflow预测网易云歌单贡献播放量的模型",
-  "main": "main.js",
-  "scripts": {
-    "start": "electron ."
-  },
   "author": "Dyrox",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^13.1.7",
-    "electron-builder": "^22.14.1"
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "build": {
-    "appId": "neteaseplay.tensorflowAI.predictor",
-    "productName": "网易云歌单播放量预测模型",
-    "directories": {
-      "output": "dist"
-    },
-    "mac": {
-      "category": "public.app-category.utilities",
-      "icon": "blueNetEase-Music-logo.icns"
-    }
+  "dependencies": {
+    
+    "electron": "25.2.0"
+  },
+  "devDependencies": {
+    "electron-builder": "24.1.0"
   }
 }

@@ -69,7 +69,22 @@ async function predict() {
   const model = await loadModel();
   const input = tf.tensor2d([[playlistContributingFactor]]);
   const prediction = model.predict(input);
-  const result = ~~prediction.dataSync()[0];
+  const result = prediction.dataSync()[0];
   
-  document.getElementById("predictionField").textContent = result;
+  document.getElementById("predictionField").textContent = ~~result;
+  if(result<100){
+    // make the getElementById("predictionField red, else green
+  }
+  document.getElementById("predictionField").textContent = ~~result;
+document.getElementById("predictmMoney").textContent = '¥' + (result / 400 * 30);
+
+if (result < 100) {
+  document.getElementById("predictionField").style.color = "red";
+  document.getElementById("predictmMoney").style.color = "red";
+} else {
+  document.getElementById("predictionField").style.color = "green";
+  document.getElementById("predictmMoney").style.color = "green";
+}
+
+  
 }
