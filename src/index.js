@@ -8,16 +8,15 @@ function createWindow () {
     icon: __dirname + 'blueNetEase-Music-logo.icns',
     width: 1280,
     height: 720,
+    icon: __dirname + 'blueNetEase-Music-logo.icns',
     webPreferences: {
-
-
 
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
   // and load the index.html of the app.
-  mainWindow.loadFile('index.html')
+  mainWindow.loadFile('src/index.html')
 
 
   // Open the DevTools.

@@ -1,20 +1,43 @@
 {
-  "name": "网易预测播放量软件",
-  "productName": "网易预测electron-app",
-  "description": "基于Tensorflow.js的预测模型",
-  "keywords": [],
-  "main": "./main.js",
+  "name": "netease-predict-app",
+  "productName": "网易云歌单播放量预测模型",
   "version": "1.0.0",
-  "author": "Dyrox",
+  "description": "My Electron application description",
+  "main": "src/index.js",
   "scripts": {
-    "start": "electron .",
-    "build": "electron-builder"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make --platform=darwin --arch=arm64",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
+  "keywords": [],
+  "author": {
+    "name": "Dyrox",
+    "email": "dyhmusicstuff@gmail.com"
+  },
+  "license": "MIT",
   "dependencies": {
-    
-    "electron": "25.2.0"
+    "electron-squirrel-startup": "^1.0.0"
   },
   "devDependencies": {
-    "electron-builder": "24.1.0"
+    "@electron-forge/cli": "^6.2.1",
+    "@electron-forge/maker-deb": "^6.2.1",
+    "@electron-forge/maker-rpm": "^6.2.1",
+    "@electron-forge/maker-squirrel": "^6.2.1",
+    "@electron-forge/maker-zip": "^6.2.1",
+    "@electron-forge/plugin-auto-unpack-natives": "^6.2.1",
+    "electron": "25.2.0",
+    "electron-forge": "^5.2.4"
+  },
+  "build": {
+    "appId": "neteaseplay.tensorflowAI.predictor",
+    "directories": {
+      "output": "dist"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "blueNetEase-Music-logo.icns"
+    }
   }
 }
